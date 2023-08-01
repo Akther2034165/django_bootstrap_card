@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block title %}index{% endblock %}
 {% block content %}
+<h1 class="display-6 text-center text-uppercase p-2">Home Page</h1>
 <div class="container">
-    <h1 class="display-6 text-center text-uppercase p-2">Home Page</h1>
-    <div class="row d-flex">
+    <div class="row row-cols-1 row-cols-md-4">
         {% for meal in meals %}
-        <div class="col mb-3">   
-            <div class="card" style="width: 19rem;">
+        <div class="col mb-4">   
+            <div class="card" >
                 <img src="{{meal.strMealThumb}}" class="card-img-top" alt="">
                 <div class="card-body">
                      <h5 class="card-title">{{meal.strMeal}}</h5>
